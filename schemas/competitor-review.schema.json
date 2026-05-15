@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "title": "Competitor Review",
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "compared_competitors": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "comparison_matrix": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "technical_score_implication": {
+      "type": "string"
+    },
+    "business_score_implication": {
+      "type": "string"
+    },
+    "max_score_gate_status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "case_id"
+  ]
+}

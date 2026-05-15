@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "title": "Score Calibration",
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "provisional_scores": {
+      "type": "object"
+    },
+    "applicable_caps": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "final_scores": {
+      "type": "object"
+    },
+    "max_score_gate": {
+      "type": "object"
+    },
+    "chair_rationale": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "case_id",
+    "final_scores"
+  ]
+}

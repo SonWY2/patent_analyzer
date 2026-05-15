@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "title": "Evidence Pack",
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "evidence_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "source_date": {
+            "type": "string"
+          },
+          "file_path_or_url": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "supported_claims": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "relevance": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "evidence_id",
+          "category",
+          "source",
+          "summary"
+        ]
+      }
+    },
+    "missing_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "required": [
+    "case_id",
+    "evidence_items"
+  ]
+}
