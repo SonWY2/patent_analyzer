@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "title": "Creative Hypotheses",
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "hypotheses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hypothesis_id": {
+            "type": "string"
+          },
+          "hypothesis": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "required_evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "score_use": {
+            "const": "not_allowed_until_verified"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "case_id",
+    "hypotheses"
+  ]
+}

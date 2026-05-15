@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "title": "Council Review",
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "independent_opinions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "disagreements": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "devil_advocate_challenges": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "chair_notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "case_id"
+  ]
+}

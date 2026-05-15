@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "title": "Patentability Review",
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "novelty_risk": {
+      "type": "string"
+    },
+    "inventive_step_risk": {
+      "type": "string"
+    },
+    "claim_breadth_risk": {
+      "type": "string"
+    },
+    "prior_art_references": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "score_cap_implications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "case_id"
+  ]
+}

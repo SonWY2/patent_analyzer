@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "title": "Final Report",
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "invention_title": {
+      "type": "string"
+    },
+    "final_technical_score": {
+      "type": "number"
+    },
+    "final_business_score": {
+      "type": "number"
+    },
+    "objective_evidence_table": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "max_score_eligibility": {
+      "type": "object"
+    },
+    "missing_information": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "final_opinion": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "case_id",
+    "final_technical_score",
+    "final_business_score",
+    "final_opinion"
+  ]
+}

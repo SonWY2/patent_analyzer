@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "title": "Invention Map",
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "invention_title": {
+      "type": "string"
+    },
+    "source_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "problem": {
+      "type": "object"
+    },
+    "existing_limitations": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "proposed_solution": {
+      "type": "object"
+    },
+    "claimed_effects": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "claim_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "missing_information": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "case_id",
+    "problem",
+    "proposed_solution"
+  ]
+}

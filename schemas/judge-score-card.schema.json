@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "title": "Judge Score Card",
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "dimension": {
+      "enum": [
+        "technical",
+        "business"
+      ]
+    },
+    "provisional_score": {
+      "type": "number"
+    },
+    "item_scores": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "type": "string"
+          },
+          "max": {
+            "type": "number"
+          },
+          "score": {
+            "type": "number"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "uncertainty": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "cap_concerns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "case_id",
+    "dimension",
+    "provisional_score",
+    "item_scores"
+  ]
+}

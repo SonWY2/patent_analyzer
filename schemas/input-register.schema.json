@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "title": "Input Register",
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "invention_title": {
+      "type": "string"
+    },
+    "input_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "file_id": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "confidentiality": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "missing_inputs": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "required": [
+    "case_id",
+    "input_files"
+  ]
+}
