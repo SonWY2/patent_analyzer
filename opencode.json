@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["AGENTS.md"],
+  "default_agent": "patent-review-council",
+  "agent": {
+    "patent-review-council": {
+      "mode": "primary",
+      "description": "Orchestrates the patent review council workflow and delegates independent patent-review roles.",
+      "permission": {
+        "task": {
+          "*": "deny",
+          "patent-intake": "allow",
+          "document-extractor": "allow",
+          "invention-structurer": "allow",
+          "creative-expansion": "allow",
+          "evidence-web-researcher": "allow",
+          "technical-excellence-judge": "allow",
+          "business-utilization-judge": "allow",
+          "patentability-judge": "allow",
+          "competitor-analyst": "allow",
+          "product-roadmap-analyst": "allow",
+          "devil-advocate": "allow",
+          "evidence-auditor": "allow",
+          "score-chair": "allow",
+          "report-writer": "allow"
+        }
+      }
+    }
+  }
+}
