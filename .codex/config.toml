@@ -1,0 +1,7 @@
+# Project-scoped Codex configuration for the patent review council workflow.
+# Codex loads .codex/config.toml only for trusted projects.
+
+[agents]
+max_threads = 6
+max_depth = 1
+job_max_runtime_seconds = 3600
